@@ -1,0 +1,85 @@
+.box-shadow {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 0 100px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 2px;
+    position: relative;
+    background-color: #ffffff;
+    overflow: visible;
+}
+
+.box-shadow:before,
+.box-shadow:after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    right: 20px;
+    bottom: 5px;
+    border-radius: 100px/50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0px 50px;
+}
+
+.mainBox {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+}
+
+.fade-enter {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+}
+
+.fade-leave {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 0.01;
+}
+
+.example-enter {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+}
+
+.example-leave {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+}
+
+*::selection {
+    color: #fff;
+    background: #ff5e2c;
+}
+
+*::-moz-selection {
+    color: #fff;
+    background: #ff5e2c;
+}
+
+*::-webkit-selection {
+    color: #fff;
+    background: #ff5e2c;
+}

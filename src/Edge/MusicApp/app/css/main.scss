@@ -1,0 +1,157 @@
+$backgroundColor : rgb(247,225,60);
+$iconColor : rgb(158,145,44);
+
+
+html,body{
+    -apple-user-select: none;
+    -webkit-user-select: none;
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family: "microsoft yahei";
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.bodyContainer{
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+    height: 100%;
+    
+}
+.leftlist {
+    position: absolute;
+    top: 12.2%;
+    left: 3%;
+    color: white;
+    li{
+        cursor: pointer;
+    }
+}
+.player{
+    position: relative;
+    top:20%;
+    height: 100%;
+    text-align: center;
+}
+.music_pic{
+    display: inline-block;
+    height: 50%;
+    border: solid 5px #FFF;
+    background-color: rgba(255,255,255,0.2);
+    img{
+        height: 100%;
+    }
+
+}
+.music_button{
+    text-align: center;
+     ul {
+      width: 100%;
+      margin:30px auto;
+      font-size: 25px;
+    }
+     li{
+        display: inline-block;
+        margin: 0px 20px;
+        opacity: 0.3;
+        cursor: pointer;
+
+    }
+
+}
+.music_progress{
+    text-align: center;
+    line-height: 20px;
+    .progress{
+        margin: 0px 10px;
+        display: inline-block;
+        width: 68%;
+        height: 10px;
+        background-color: $iconColor;
+        position: relative;
+        overflow: hidden;
+        .progressbar{
+            position: absolute;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            transform: translate3d(-9%,0,0);
+            -webkit-transform: -webkit-translate3d(-9%,0,0);
+        }
+    }
+}
+.music_status{
+    text-align: right;
+    padding-left:16%;
+    padding-right: 16%;
+    line-height:30px;
+    
+}
+
+.footerdetail{
+    float: left;
+}
+.footbar{
+    
+}
+.voice{
+    position: relative;
+    display: inline-block;
+    height: 2px;
+    width: 15%;
+    background: #fff;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    margin-right: 20px;
+
+    .voice_btn{
+        position: absolute;
+        top:-9px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        background: $backgroundColor;
+        cursor: pointer;
+        z-index: 3;
+        &:before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background: #7e756f;
+            margin: auto;
+            z-index: 999;
+        }
+    }
+    .currentvoice{
+        transition: all 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        background: rgb(126,117,111);
+        z-index: 2;
+    }
+}
+.option{
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.share{
+    color:#fff;
+    cursor: pointer;
+}
